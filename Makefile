@@ -9,8 +9,7 @@ CFLAGS=\
 	-Wpedantic \
 	-Wimplicit-fallthrough \
 	-Wshadow \
-	-Wstrict-prototypes \
-	-Wmissing-prototypes
+	-Wstrict-prototypes
 
 all: kilo tidy
 
