@@ -4,8 +4,6 @@ AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: None
 AllowShortIfStatementsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
-AlwaysBreakAfterReturnType: All
-BreakBeforeBraces: Allman
 ContinuationIndentWidth: 8
 Cpp11BracedListStyle: false
 IndentWidth: 8
