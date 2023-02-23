@@ -444,10 +444,10 @@ void editorSave(void) {
 
 /*** find ***/
 
-void editorFind(void) {
-	char *query = editorPrompt("Search: %s (ESC to cancel)", NULL);
-	if (query == NULL)
+void editorFindCallback(char *query, int key) {
+	if (key == '\r' || key == '\x1b') {
 		return;
+	}
 
 	int i;
 	for (i = 0; i < E.numrows; i++) {
@@ -459,6 +459,15 @@ void editorFind(void) {
 			E.rowoff = E.numrows;
 			break;
 		}
+	}
+}
+
+void editorFind(void) {
+	char *query =
+		editorPrompt("Search: %s (ESC to cancel)", editorFindCallback);
+
+	if (query == NULL) {
+		free(query);
 	}
 }
 
