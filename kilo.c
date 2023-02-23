@@ -92,6 +92,8 @@ struct editorSyntax HLDB[] = {
 	},
 };
 
+#define HLDB_ENTRIES (sizeof(HLDB) / sizeof(HLDB[0]))
+
 /*** prototypes ***/
 
 void editorSetStatusMessage(const char *fmt, ...);
