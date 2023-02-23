@@ -413,7 +413,7 @@ void editorOpen(char *filename) {
 
 void editorSave(void) {
 	if (E.filename == NULL) {
-		E.filename = editorPrompt("Save as: %s");
+		E.filename = editorPrompt("Save as: %s", NULL);
 		if (E.filename == NULL) {
 			editorSetStatusMessage("Save aborted");
 			return;
@@ -445,7 +445,7 @@ void editorSave(void) {
 /*** find ***/
 
 void editorFind(void) {
-	char *query = editorPrompt("Search: %s (ESC to cancel)");
+	char *query = editorPrompt("Search: %s (ESC to cancel)", NULL);
 	if (query == NULL)
 		return;
 
